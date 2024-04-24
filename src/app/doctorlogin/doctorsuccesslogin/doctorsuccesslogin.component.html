@@ -1,0 +1,72 @@
+<div class="header">
+    <h1>Doctor Component</h1>
+  </div>
+  <div class="content">
+  <div class="nav">
+    <div class="content1">
+        <img src="/assets/images/dinesh.jpg" alt="">
+        <span>
+            <h2>Dinesh Pd. Joshi</h2>
+            <h3>Online</h3>
+        </span>
+    </div>
+    <div class="main">
+        <ul>
+            <li>Dashboard</li>
+            <li>Patient Waiting</li>
+            <li>Treated Patient</li>
+            <li>Attendance</li>
+        </ul>
+  
+    </div>
+  </div>
+  <div class="body">
+    
+  <h1>Waiting Patients</h1>
+  <table class="table table-striped" >
+      <thead>
+      <tr>
+          <th>Id</th>
+          <th>Full Name</th>
+          <th>Gender</th>
+          <th>Bloodgroup</th>
+          <th>Symptoms</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal" style="height: 7vh;width:50px;" >Treat</button></td>
+          
+      </tr>
+  </tbody>
+  </table>
+
+  <div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content" style="width: 140%; margin-left: 300px; background-color: blue; " >
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Prescription</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label for="Full Name">Full Name</label><br>
+            <input type="text" placeholder="Full Name" name="FullName"><br>
+            <label for="Full Name">Gender</label><br>
+            <input type="text" placeholder="Gender" name="Gender"><br>
+            <label for="Full Name">Symptoms</label><br>
+            <input type="text" placeholder="Symptoms" name="Symptoms"><br>
+            <label for="Problem">Problem</label><br>
+            <input type="text" placeholder="Enter the Problem"><br>
+            <label for="Preventive Measures">Preventive Measures</label><br>
+            <input type="text" placeholder="Enter the Preventive Measures"><br>
+            <button type="button" class="btn btn-primary" style="height: 7vh;width:80px;margin-left:4px;"  data-bs-dismiss="modal">Update</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"style="height: 7vh;width:80px; margin-left:10px;">Close</button>
+
+
+        </div>

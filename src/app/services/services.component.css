@@ -1,0 +1,39 @@
+*{
+    list-style: none;
+}
+.container{
+    max-width: 100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+.block{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    background-color: #33CCCC;
+    width: 20%;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+.container #blocks{
+    background-color: #EFF8FB;
+}
+.container .block .fa{
+    color: white;
+    font-size: 5vw;
+    transition: all .5s ease-in-out;
+}
+.block h1{
+    color: white;
+    font-size: 2vw;
+}
+.block p{
+    color: white;
+    font-size: 1.3vw;
+}
+.block:hover{
+    margin-top: -10px;
+    box-shadow: rgba(9, 8, 8, 0.514) 10px 1px 30px 2px;
+}

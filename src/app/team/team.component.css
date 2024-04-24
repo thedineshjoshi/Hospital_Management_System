@@ -1,0 +1,125 @@
+*{
+    list-style: none;
+}
+#top{
+    text-align: center;
+    color: #33CCCC;
+    font-size: 2.5vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: auto;
+}
+.container{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    
+}
+.team1{
+    background: url(/assets/images/ezgif.com-gif-maker.jpg);
+    background-size: cover;
+    width: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    margin-right: 2vw;
+    transition: all .2s ease-in-out ;
+    display: flex;
+    flex-direction: column;
+    height:30vw;
+}
+.team2{
+    background: url(/assets/images/image2.jpg);
+    background-size: cover;
+    height:30vw;
+    width: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    margin-right: 2vw;
+    transition: all .2s ease-in-out ;
+    display: flex;
+    flex-direction: column;
+    
+}
+.team3{
+    background: url(/assets/images/image3.jpg);
+    background-size: cover;
+    height:30vw;
+    width: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    transition: all .2s ease-in-out ;
+    display: flex;
+    flex-direction: column;
+}
+.container .team1 h1{
+    text-align: center;
+    color: white;
+    background-color: #22109965;
+    margin-top: auto;
+    font-size: 2vw;
+}
+.container .team2 h1{
+    text-align: center;
+    color: white;
+    background-color: #22109965;
+    margin-top: auto;
+    font-size: 2vw;
+}
+.container .team3 h1{
+    text-align: center;
+    color: white;
+    background-color: #22109965;
+    margin-top: auto;
+    font-size: 2vw;
+}
+.container .team1 ul{
+    list-style: none;
+    color: white;
+    font-size: 2vw;
+    margin-left: 0px;
+}
+.container .team1 ul li{
+    padding: 3px;
+    
+}
+.container .team2 ul{
+    list-style: none;
+    color: white;
+    font-size: 2vw;
+    margin-left: 0px;
+}
+.container .team2 ul li{
+    padding: 3px;
+    
+}
+.container .team3 ul{
+    list-style: none;
+    color: white;
+    font-size: 2vw;
+    margin-left: 0px;
+}
+.container .team3 ul li{
+    padding: 3px;
+    
+}
+.container .team1 ul li .fa:hover{
+    margin-top: -10px;
+    box-shadow: rgba(9, 8, 8, 0.514) 10px 1px 30px 2px;
+}
+.team3:hover{
+    margin-top: -10px;
+    box-shadow: rgba(9, 8, 8, 0.514) 10px 1px 30px 2px;
+}
+.team2:hover{
+    margin-top: -10px;
+    box-shadow: rgba(9, 8, 8, 0.514) 10px 1px 30px 2px;
+}
+.team1:hover{
+    margin-top: -10px;
+    box-shadow: rgba(9, 8, 8, 0.514) 10px 1px 30px 2px;
+}

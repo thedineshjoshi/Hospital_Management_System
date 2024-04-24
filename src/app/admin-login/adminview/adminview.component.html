@@ -1,0 +1,71 @@
+<div class="header">
+    <h1>Lotus Hospital</h1>
+    
+    
+</div>
+<div class="content">
+<div class="nav">
+    <div class="content1">
+        <img src="/assets/images/dinesh.jpg" alt="">
+        <span>
+            <h2>Dinesh Pd. Joshi</h2>
+            <h3>Online</h3>
+        </span>
+    </div>
+    <div class="main">
+        <ul>
+            <li routerLink="/adminview">Dashboard</li>
+            <li routerLink="/adminpatientview">Patient</li>
+            <li routerLink="/admindoctorview">Doctor</li>
+            <li>Appointment</li>
+            <li>Services</li>
+            <li>Profile</li>
+            <li>Prescription</li>
+            <li (click)="logout()">Log Out</li>
+
+        </ul>
+
+    </div>
+</div>
+<div class="body">
+    <h1>Dashboard</h1>
+    <div class="blocks">
+    <div class="block1">
+        <h4>Doctors</h4>
+    </div>
+    <div class="block2">
+        <h4>Patients</h4>
+    </div>
+    <div class="block3">
+        <h4>Appointment</h4>
+    </div>
+    <div class="block4">
+        <h4>Precautions</h4>
+    </div>
+</div>
+    
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
+
+
+
+
+
+

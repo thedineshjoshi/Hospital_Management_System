@@ -1,0 +1,23 @@
+<app-topnav></app-topnav>
+<div class="wrapper">
+    <div class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkfMfNW32bnLD6nAHxa8N4_Y9gP7pwevUdtPfzwcKHug&s" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+        Doctor Login
+    </div>
+    <form class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+             <input type="text" name="userName" [(ngModel)]="LoginRequest.Username" id="userName" placeholder="Username">
+
+        </div>
+        <div class="form-field d-flex align-items-center">
+             <input type="password" name="password" [(ngModel)]="LoginRequest.Password" id="pwd" placeholder="Password">
+
+        </div>
+        <button class="btn mt-3" (click)="Login()">Login</button>
+    </form>
+    <div class="text-center fs-6">
+        <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+    </div>
+</div>

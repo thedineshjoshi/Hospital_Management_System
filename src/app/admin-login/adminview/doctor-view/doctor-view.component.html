@@ -1,0 +1,179 @@
+<div class="header">
+  <h1>Lotus Hospital</h1>
+</div>
+<div class="content">
+<div class="nav">
+  <div class="content1">
+      <img src="/assets/images/dinesh.jpg" alt="">
+      <span>
+          <h2>Dinesh Pd. Joshi</h2>
+          <h3>Online</h3>
+      </span>
+  </div>
+  <div class="main">
+      <ul>
+          <li routerLink="/adminview">Dashboard</li>
+          <li routerLink="/adminpatientview">Patient</li>
+          <li routerLink="/admindoctorview">Doctor</li>
+          <li>Appointment</li>
+          <li>Services</li>
+          <li>Profile</li>
+          <li>Prescription</li>
+      </ul>
+
+  </div>
+</div>
+<div class="body">
+  
+  <button type="button" class="btn btn-primary" style=" float: right;height: 7vh;margin-right: 20px;margin-top:10px;" data-bs-toggle="modal" data-bs-target="#exampleModalLong">Add Doctors</button>
+<h1>Admin Panel for Doctor</h1>
+<table class="table table-striped" >
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Address</th>
+        <th>PhoneNumber</th>
+        <th>Specialization</th>
+        <th>Department</th>
+        <th>Patients</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let item of Doctorlist">
+        <td>{{item.id}}</td>
+        <td>{{item.firstName}}</td>
+        <td>{{item.lastName}}</td>
+        <td style="text-align: left;width: 250px;">{{item.address}}</td>
+        <td>{{item.phoneNumber}}</td>
+        <td>{{item.specialization}}</td>
+        <td>{{item.department}}</td>
+        <!-- <td *ngFor="let item of item.patients" style="overflow:scroll;">{{item.firstName}}</td> -->
+        <td><li style="list-style: none;text-align: left; -display:flex;padding: 0px;width: max-content;" *ngFor="let item of item.patients" data-bs-toggle="modal" data-bs-target="#exampleModals">{{item.firstName}} {{item.lastName}}</li></td>
+        <td style="width: 300px;"><button type="button" class="btn btn-primary" (click)="ViewDoctorById(item.id)" data-bs-toggle="modal" data-bs-target="#exampleModal" style="height: 7vh;width:50px;" >Edit</button><button style="height: 7vh;width:50px;margin-left: 3px;" type="button" class="btn btn-danger" (click)="DeleteDoctor(item.id)" >Delete</button></td>
+    </tr>
+</tbody>
+</table>
+
+
+<!-- ------------------------------------------ -->
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content" style="width: 140%;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Doctor</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="doctor.DoctorRegistrationForm" (ngSubmit)="editDoctor"> 
+            
+              <label> Firstname: </label><br>   
+          <input type="text" name="firstname" formControlName="FirstName" placeholder= "Firstname"  />   <br>
+          <small *ngIf="doctor.DoctorRegistrationForm.get('FirstName').invalid
+          &&doctor.DoctorRegistrationForm.get('FirstName').touched" class="text-danger">FirstName is required</small><br>
+          <label> Lastname:</label>     <br>
+          <input type="text" name="lastname" formControlName="LastName" placeholder="Lastname" /> <br>
+          <small *ngIf="doctor.DoctorRegistrationForm.get('LastName').invalid
+          &&doctor.DoctorRegistrationForm.get('LastName').touched" class="text-danger">LastName is required</small><br>
+               
+              <label> Address: </label>     <br>
+              <input type="text" name="Address" formControlName="Address"  placeholder="Address" /><br>
+              <small *ngIf="doctor.DoctorRegistrationForm.get('Address').invalid
+              &&doctor.DoctorRegistrationForm.get('Address').touched" class="text-danger">Address is required</small><br>
+              <label> PhoneNumber: </label>     <br>
+              <input type="text" name="PhoneNumber" formControlName="PhoneNumber"  placeholder="PhoneNumber" /><br>
+              <small *ngIf="doctor.DoctorRegistrationForm.get('PhoneNumber').invalid
+              &&doctor.DoctorRegistrationForm.get('PhoneNumber').touched" class="text-danger">PhoneNumber is required</small><br>
+          
+          
+          <label> Specialization: </label> <br>
+          <select name="Specialization" formControlName="Specialization" class="form-control form-control-lg"  id="">
+            <option selected value="Choose Specialization">Choose Specialization</option><br>
+            <option value="Psychatrist">Psychatrist</option>  
+            <option value="Dentist">Dentist</option>  
+            <option value="Physist">Physist</option>  
+            <option value="Dermatologist">Dermatologist</option>  
+            <option value="Gynecologists">Gynecologists</option>
+            <option value="Cardiologist">Cardiologist </option>
+            <option value="Gastroenterologists">Gastroenterologists</option>
+          </select><br>
+          <label> Department: </label>     <br>
+          <input type="text" name="Department" formControlName="Department"  placeholder="Department" />  <br>
+          <small *ngIf="doctor.DoctorRegistrationForm.get('Department').invalid
+          &&doctor.DoctorRegistrationForm.get('Department').touched" class="text-danger">Department is required</small><br>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"style="height: 7vh;width:80px">Close</button>
+          <button type="button" class="btn btn-primary"(click)="editDoctor()" data-bs-dismiss="modal"style="height: 7vh;width:80px;margin-left:4px;" >Update</button>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+
+<!-- ------------------------------------------------------------------------------------>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="width: 800px;">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="doctor.DoctorRegistrationForms" (ngSubmit)="addDoctor">  
+          <div class="container1">  
+            <h1> Doctor Registeration Form</h1>  
+          <hr>  
+          <label> Firstname: </label>   
+        <input type="text" name="firstname" formControlName="FirstName" placeholder= "Firstname"  />   
+        <small *ngIf="doctor.DoctorRegistrationForms.get('FirstName').invalid
+        &&doctor.DoctorRegistrationForms.get('FirstName').touched" class="text-danger">FirstName is required</small><br>
+        <label> Lastname: </label>     
+        <input type="text" name="lastname" formControlName="LastName" placeholder="Lastname" /> 
+        <small *ngIf="doctor.DoctorRegistrationForms.get('LastName').invalid
+        &&doctor.DoctorRegistrationForms.get('LastName').touched" class="text-danger">LastName is required</small><br>
+        <label> Address: </label>     
+        <input type="text" name="Address" formControlName="Address"  placeholder="Address" />
+        <small *ngIf="doctor.DoctorRegistrationForms.get('Address').invalid
+        &&doctor.DoctorRegistrationForms.get('Address').touched" class="text-danger">Address is required</small><br>
+        <label> PhoneNumber: </label>     
+        <input type="text" name="PhoneNumber" formControlName="PhoneNumber"  placeholder="PhoneNumber" />
+        <small *ngIf="doctor.DoctorRegistrationForms.get('PhoneNumber').invalid
+        &&doctor.DoctorRegistrationForms.get('PhoneNumber').touched" class="text-danger">PhoneNumber is required</small><br>
+        <label> Specialization: </label> 
+        <select name="Specialization" formControlName="Specialization" class="form-control form-control-lg"  id="">
+          <option value="Choose Specialization" selected>Choose Specialization</option>
+          <option value="Neurologist">Neurologist</option> 
+          <option value="Psychatrist">Psychatrist</option>  
+          <option value="Dentist">Dentist</option>  
+          <option value="Physist">Physist</option>  
+          <option value="Dermatologist">Dermatologist</option>  
+          <option value="Gynecologists">Gynecologists</option>
+          <option value="Cardiologist">Cardiologist </option>
+          <option value="Gastroenterologists">Gastroenterologists</option>
+        </select><br>
+        <label> Department: </label>     
+        <input type="text" name="Department" formControlName="Department"  placeholder="Department" />  
+        <small *ngIf="doctor.DoctorRegistrationForms.get('Department').invalid
+        &&doctor.DoctorRegistrationForms.get('Department').touched" class="text-danger">Department is required</small><br>
+        
+          </div>
+        </form> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" style="width:80px; margin:10px" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" style="width:120px; margin:10px" class="btn btn-primary" data-bs-dismiss="modal" (click)="addDoctor()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> 

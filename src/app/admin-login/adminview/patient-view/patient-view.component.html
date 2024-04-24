@@ -1,0 +1,84 @@
+<div class="header">
+    <h1>Lotus Hospital</h1>
+</div>
+<div class="content">
+<div class="nav">
+    <div class="content1">
+        <img src="/assets/images/dinesh.jpg" alt="">
+        <span>
+            <h2>Dinesh Pd. Joshi</h2>
+            <h3>Online</h3>
+        </span>
+    </div>
+    <div class="main">
+        <ul>
+            <li routerLink="/adminview">Dashboard</li>
+            <li routerLink="/adminpatientview">Patient</li>
+            <li routerLink="/admindoctorview">Doctor</li>
+            <li>Appointment</li>
+            <li>Services</li>
+            <li>Profile</li>
+            <li>Prescription</li>
+
+        </ul>
+
+    </div>
+</div>
+<div class="body">
+    <h1>Admin Panel for Patient</h1>
+<table class="table table-striped" >
+    <thead>
+    <tr>
+        
+        <th>Id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Address</th>
+        <th>PhoneNumber</th>
+        <th>Age</th>
+        <th>Weight</th>
+        <th>BloodGroup</th>
+        <th>Doctor</th>
+        <th>Gender</th>
+        <th>Symptoms</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let data of PatientList">
+        <td>{{data.id}}</td>
+        <td>{{data.firstName}}</td>
+        <td>{{data.lastName}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.phoneNumber}}</td>
+        <td>{{data.age}}</td>
+        <td>{{data.weight}}</td>
+        <td>{{data.bloodGroup}}</td>
+        <td *ngFor="let item of docName">{{item.firstName}} {{item.lastName}}</td> 
+        <td>{{data.gender}}</td>
+        <td>{{data.symptoms}}</td>
+    </tr>
+</tbody>
+
+</table>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

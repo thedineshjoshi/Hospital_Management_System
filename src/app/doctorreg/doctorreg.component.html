@@ -1,0 +1,41 @@
+<form [formGroup]="doctor.DoctorRegistrationForm" (ngSubmit)="addDoctor">  
+    <div class="container1">  
+      <h1> Doctor Registeration Form</h1>  
+    <hr>  
+    <label> Firstname: </label>   
+  <input type="text" name="firstname" formControlName="FirstName" placeholder= "Firstname"  />   
+  <small *ngIf="doctor.DoctorRegistrationForm.get('FirstName').invalid
+  &&doctor.DoctorRegistrationForm.get('FirstName').touched" class="text-danger">FirstName is required</small>
+  <label> Lastname: </label>     
+  <input type="text" name="lastname" formControlName="LastName" placeholder="Lastname" /> 
+  <small *ngIf="doctor.DoctorRegistrationForm.get('LastName').invalid
+  &&doctor.DoctorRegistrationForm.get('LastName').touched" class="text-danger">LastName is required</small>
+  <label> Address: </label>     
+  <input type="text" name="Address" formControlName="Address"  placeholder="Address" />
+  <small *ngIf="doctor.DoctorRegistrationForm.get('Address').invalid
+  &&doctor.DoctorRegistrationForm.get('Address').touched" class="text-danger">Address is required</small>
+  <label> PhoneNumber: </label>     
+  <input type="text" name="PhoneNumber" formControlName="PhoneNumber"  placeholder="PhoneNumber" />
+  <small *ngIf="doctor.DoctorRegistrationForm.get('PhoneNumber').invalid
+  &&doctor.DoctorRegistrationForm.get('PhoneNumber').touched" class="text-danger">PhoneNumber is required</small>
+  <label> Specialization: </label> 
+  <select name="Specialization" formControlName="Specialization" class="form-control form-control-lg"  id="">
+    <option value="Choose Specialization">Choose Specialization</option>
+    <option selected value="Neurologist">Neurologist</option> 
+    <option value="Psychatrist">Psychatrist</option>  
+    <option value="Dentist">Dentist</option>  
+    <option value="Physist">Physist</option>  
+    <option value="Dermatologist">Dermatologist</option>  
+    <option value="Gynecologists">Gynecologists</option>
+    <option value="Cardiologist">Cardiologist </option>
+    <option value="Gastroenterologists">Gastroenterologists</option>
+  </select><br>
+  <label> Department: </label>     
+  <input type="text" name="Department" formControlName="Department"  placeholder="Department" />  
+  <small *ngIf="doctor.DoctorRegistrationForm.get('Department').invalid
+  &&doctor.DoctorRegistrationForm.get('Department').touched" class="text-danger">Department is required</small>
+  <label>       
+      <button type="submit" class="registerbtn" (click)="addDoctor()">Register</button>
+  </label>
+    </div>
+  </form>  

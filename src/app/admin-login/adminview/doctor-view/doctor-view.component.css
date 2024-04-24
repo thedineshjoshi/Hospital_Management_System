@@ -1,0 +1,127 @@
+.register{
+  width: 100%;
+}
+
+.butt{
+    float: right;
+    height: 7vh;
+    margin-right: 20px;
+    margin-top:10px;
+}
+h1{
+    text-align: center;
+    color: blue;
+    font-size: 2.5vw;
+}
+.DoctorList{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5vw;
+    text-align: center;
+}
+.PatientList{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5vw;
+    text-align: center;
+}
+.DoctorList, th, td {
+    padding: 10px;
+  }
+  td,th{
+    text-align: center;
+    width: max-content
+  }
+  input{
+    border-radius: 10px;
+    width: 100%;
+    border-color: black;
+  }
+.modal{
+  margin-left: 350px;
+  width: 1000px;
+}
+
+  label{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  .header{
+    background-color: #3399CC;
+  }
+  .header h1{
+    color: white;
+    font-size:2vw;
+  }
+  .nav{
+    height:100vh;
+    background-color: #333333;
+    width:25%;
+  }
+  .content1{
+    display: flex;
+    height: fit-content ;
+  }
+  .ng-touched:not(form) {
+    border: 5px solid red;
+
+  }
+  .ng-valid:not(form) {
+    border: 5px solid green;
+  }
+  .nav .content1 img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 20px 10px;
+  }
+  .nav .content1 h2{
+    color: white;
+    margin-top: 20px;
+    font-size: 2vw;
+    height: fit-content;
+    width: 258px;
+  }
+  h3{
+    color: greenyellow;
+    font-size: 1.2vw;
+    height: fit-content;
+  }
+  .main{
+    margin-top: -180px;
+  
+  }
+  .main ul{
+    width: max-content;
+  }
+  .main ul li{
+    /* text-align: center; */
+    width: 338px;
+    padding-left: 20px;
+    font-size: 1.6vw;
+    margin-top: 20px;
+    list-style: none;
+    color: white;
+    cursor: pointer;
+  }
+  .main ul li:hover{
+    background-color: #3399CC;
+  }
+  .content{
+    display: flex;
+    height: fit-content;
+  }
+  .body{
+    width: 100%;
+  }
+  .body h1{
+    font-size: 30px;
+    color: black;
+    height: fit-content;
+    width: 100%;
+  }

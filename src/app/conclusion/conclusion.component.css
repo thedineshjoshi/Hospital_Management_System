@@ -1,0 +1,57 @@
+*{
+    list-style: none;
+}
+
+.container{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color:#152847;
+    color: white;
+    background: url(/assets/images/bak.jpg);
+    background-size: cover;
+    /* box-shadow:inset 0 0 0 2000px rgba(31, 4, 120, 0.734); */
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.824);
+    
+}
+.block1{
+    width:20%;
+    text-align: justify;
+    list-style: none;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+.block2{
+    width:20%;
+    list-style: none;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+.block3{
+    width:20%;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+.block4{
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    list-style: none;
+    width:25%;
+}
+.block2 ul li{
+    padding-top: 1vw;
+}
+.block3 ul li{
+    padding-top: 1vw;
+}
+.block4 ul li{
+    padding-top: 1vw;
+}
+.block2 ul li:hover{
+    color: #33CCCC;
+    cursor: pointer;
+}
+.block3 ul li:hover{
+    color: #33CCCC;
+    cursor: pointer;
+}

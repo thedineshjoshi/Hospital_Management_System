@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+
+}
+.container .about .icons{
+  display: flex;
+}
+.container .about .icons2{
+  display: flex;
+}
+.container .image{
+    width: 30%;
+    border-radius: 12px;
+    background: url(/assets/images/doctor-treating-patient.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container .about{
+    width: 42%;
+    margin-left: 2vw;
+}
+button{
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    color: white;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    width: 50%;
+    font-size: 1.6vw;
+    height: 5vw;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
